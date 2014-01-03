@@ -1,0 +1,445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>PhoneGap</title>
+<meta charset="utf-8">
+<title>Labdoo.org</title>
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cleartype" content="on">
+<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+<link rel="stylesheet"  href="css/themes/default/jquery.mobile-1.3.0.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/labdoo.css">
+<link rel="stylesheet" href="css/mobiscroll.custom-2.4.5.min.css">
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+$(document).bind("mobileinit", function(){
+    $.mobile.defaultPageTransition = 'none'
+    $.mobile.loadingMessage = 'loading...'
+    $.mobile.page.prototype.options.addBackBtn= false
+});
+</script>
+<script src="js/jquery.mobile-1.3.0.js"></script>
+<script src="js/mobiscroll.custom-2.4.5.min.js"></script>
+<script src="js/labdoo.js"></script>
+</head>
+<body>
+    <!-- login page -->
+    <div data-role="page" id="login" class="panel" selected="true" data-load="loginLoad" data-header="none" data-footer="none">
+        <div class="logo"><div class="logo-img"></div></div>
+        <div class="form-wrap">
+          <div class="login-form" style="overflow:hidden">
+            <div class="form">
+            <input type="text" class="username jq-ui-forms" pretext="Username or e-mail address" data-role="none">
+            <input type="password" class="password jq-ui-forms" pretext="Password" data-role="none"><a href="#forget" class="forget">forget?</a>
+            </div>
+            <a href="#main-page" class="login button" data-transition="fade" data-transition="fade">Log in</a>
+            <a href="#new-account" class="new_account jq-ui-forms button" data-transition="fade">Create New Account</a>
+          </div>
+      </div>
+    </div><!-- /pager -->
+    
+    <!-- new account page -->
+    <div data-role="page" id="new-account" class="panel" data-header='none' style="overflow:hidden">
+      <div class="all-header"  data-role="header">
+         <a href="#login" data-role="button" data-inline="true" data-transition="fade">CANCEL</a>
+         <h1>Create New Account</h1>
+         <a href="#login"  data-role="button" data-inline="true" data-mini="true" class="tag-new right" data-transition="fade">SUBMIT</a>
+      </div>
+      <div data-role="content">
+            <div class="lap-list-detail lap-detail-location">
+                <div class="lap-list-detail-title">
+                    Account information
+                </div>
+                <div class="lap-list-detail-content">
+                    <div class="lap-list-detail-subtitle">Username</div>
+                    <div><input type="text" value="cycola" name="bi-searial-number" id="lap-detail-bi-serial-number"/></div>
+                      <div class="lap-list-detail-subtitle">Email Address</div>
+                    <div><input type="text" value="chihyen109@gmail.com" name="bi-searial-number" id="lap-detail-bi-serial-number"/></div>
+                      <div class="lap-list-detail-subtitle">Confirm Email Address</div>
+                    <div><input type="text" value="chihyen109@gmail.com" name="bi-searial-number" id="lap-detail-bi-serial-number"/></div>
+                      <div class="lap-list-detail-subtitle">Password</div>
+                    <div><input type="password" value="" name="bi-searial-number" id="lap-detail-bi-serial-number"/></div>
+                      <div class="lap-list-detail-subtitle">Confirm Password</div>
+                    <div><input type="password" value="" name="bi-searial-number" id="lap-detail-bi-serial-number"/></div>
+                </div>
+            </div>
+            <div class="lap-list-detail lap-detail-location">
+                <div class="lap-list-detail-title">Locatioin</div>
+                <div class="lap-list-detail-content">
+                    <div class="lap-list-detail-subtitle">City</div>
+                    <input type="text" value="Shangehai" name="location-city" id="lap-detail-location-city"/>
+                    <div class="lap-list-detail-subtitle">Country</div>
+                    <select name="location-country" id="lap-detail-location-country">
+                        <option value="1">China</option>
+                        <option selected="selected" value="2">USA</option>
+                        <option value="3">Aruba</option>
+                        <option value="4">The 4th Option</option>
+                    </select>   
+                </div>
+            </div>
+            <div class="lap-list-detail lap-detail-location">
+                <div class="lap-list-detail-title">About Me</div>
+                <div class="lap-list-detail-content">
+                    <div class="lap-list-detail-subtitle">Name</div>
+                    <input type="text" value="Anna Wang" name="location-city" id="lap-detail-location-city"/>
+                </div>
+            </div>
+            <div class="lap-list-detail lap-detail-location">
+                <div class="lap-list-detail-title">Terms And Conditions Of Use</div>
+                <div class="lap-list-detail-content">
+                    <input type="button" value="view detail" name="location-city" id="lap-detail-location-city"/>
+                    <a href="#popupDialog" data-rel="popup" class="popup-terms" data-position-to="window" data-theme="none" data-role="button" data-inline="true" data-transition="pop">Accept Terms & Conditions of Use</a>
+				    <div data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="none" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+				        <div data-role="header" data-theme="a" class="ui-corner-top">
+				            <h1>Terms and Conditions of Use</h1>
+				        </div>
+				        <div data-role="content" data-theme="none" class="ui-corner-bottom ui-content">
+				            <p>
+				            BE INCURRED BY YOU, HOWEVER CAUSED AND UNDER ANY THEORY OF LIABILITY.
+				            </p>
+				            <p>
+				            LABDOO DOES NOT PEPRESENT OR WARRANT TO YOU THAT:
+				            </p>
+				            <p>
+				            - ANY INFORMATION OBTAINED BY YOU AS A RESULT OF YOUR USE OF THE SERVICES WILL BE ACCURATE OR BELIABLE,
+				            </p>
+                            <p>
+                            - THAT DEFECTS IN THE OPERATION OR FUNCTIONALITY OF ANY SOFTWARE PROVIDES TO YOU AS PART OF TIME
+                            </p>
+                            <div class="text_center">
+					            <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a>
+					            <a href="#" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="c">Accpet</a>
+				            </div>
+				        </div>
+				    </div>
+                    <input type="hidden" value="0"/>
+                </div>
+            </div>
+        </div>
+    </div><!-- /page -->
+    
+    <!-- main page -->
+    <div data-role="page" id="main-page" class="panel" data-header='none' style="overflow:hidden">
+        <div data-role="content">
+            <p class="hello">Hi, <span class="username">Calvin</span> :)</p>
+            <a href="#list-page" class="tag-new" data-transition="fade"></a>
+        </div>
+        <div data-role="footer" id="main-footer">
+            <div class="main-footer-wrap"><a href="#my-account-page" class="footer-button left" data-transition="fade"></a><a href="#login" class="footer-button right" data-transition="fade"></a></div>
+        </div>
+    </div><!-- /page -->
+    
+    <!-- my account page -->
+    <div data-role="page" id="my-account-page" class="panel account-page" data-header='none' style="overflow:hidden">
+      <div class="all-header"  data-role="header">
+         <a href="#main-page" data-role="button" data-inline="true" data-transition="fade">BACK</a>
+         <h1><div><span></span>My Account</div></h1>
+         <a href="#my-account-edit-page"  data-role="button" data-inline="true" data-mini="true" class="tag-new right" data-transition="fade">EDIT</a>
+      </div>
+      <div data-role="content">
+            <div class="lap-list-detail lap-detail-account-information">
+                <div class="lap-list-detail-title">Account Information</div>
+                <div class="lap-list-detail-content">
+                    <div class="lap-list-detail-subtitle">Username</div>
+                    <div>cycola</div>
+                    <div class="lap-list-detail-subtitle">Email Address</div>
+                    <div>chihyen109@gmail.com</div>
+                    <div class="lap-list-detail-subtitle">Password</div>
+                    <div>******</div>
+                </div>
+            </div>
+            <div class="lap-list-detail lap-detail-location">
+                <div class="lap-list-detail-title">Location</div>
+                <div class="lap-list-detail-content">
+                    <div class="lap-list-detail-subtitle">City</div>
+                    <div>Shanghai</div>
+                    <div class="lap-list-detail-subtitle">Country</div>
+                    <div>China</div>
+                </div>
+            </div>
+            <div class="lap-list-detail lap-detail-about-me">
+                <div class="lap-list-detail-title">About Me</div>
+                <div class="lap-list-detail-content">
+                    <div class="lap-list-detail-subtitle">Name</div>
+                    <div>Anna Wang</div>
+                </div>
+            </div>
+      </div>
+    </div>
+    
+    <!-- my account edit page -->
+    <div data-role="page" id="my-account-edit-page" class="panel account-page" data-header='none' style="overflow:hidden">
+      <div class="all-header"  data-role="header">
+         <a href="#my-account-page" data-role="button" data-inline="true" data-transition="fade">CANCEL</a>
+         <h1><div><span></span>My Account</div></h1>
+         <a href="#my-account-page"  data-role="button" data-inline="true" data-mini="true" class="tag-new right" data-transition="fade">SAVE</a>
+      </div>
+      <div data-role="content">
+            <div class="lap-list-detail lap-detail-account-information">
+                <div class="lap-list-detail-title">Account Infomation</div>
+                <div class="lap-list-detail-content">
+                    <div class="lap-list-detail-subtitle">Username</div>
+                    <input type="text" value="cycola" name="location-city" id="lap-detail-location-city"/>
+                    <div class="lap-list-detail-subtitle">Email Address</div>
+                    <input type="text" value="chihyen109@gmail.com" name="location-city" id="lap-detail-location-city"/>
+                    <div class="lap-list-detail-subtitle">Password</div>
+                    <input type="text" value="******" name="location-city" id="lap-detail-location-city"/>
+                </div>
+            </div>
+            <div class="lap-list-detail lap-detail-location">
+                <div class="lap-list-detail-title">Location</div>
+                <div class="lap-list-detail-content">
+                    <div class="lap-list-detail-subtitle">City</div>
+                    <input type="text" value="Shangehai" name="location-city" id="lap-detail-location-city"/>
+                    <div class="lap-list-detail-subtitle">Country</div>
+                    <select name="location-country" id="lap-detail-location-country">
+                    <option value="1">China</option>
+                    <option selected="selected" value="2">USA</option>
+                    <option value="3">Aruba</option>
+                    <option value="4">The 4th Option</option>
+                </select>
+                </div>
+            </div>
+            <div class="lap-list-detail lap-detail-about-me">
+                <div class="lap-list-detail-title">About Me</div>
+                <div class="lap-list-detail-content">
+                    <div class="lap-list-detail-subtitle">Name</div>
+                    <input type="text" value="Anna Wang" name="location-city" id="lap-detail-location-city"/>
+                </div>
+            </div>
+      </div>
+    </div>
+    
+    <!-- list page -->
+    <div data-role="page" id="list-page" class="panel" data-header='none' style="overflow:hidden">
+        <div class="all-header"  data-role="header">
+         <a href="#main-page" data-role="button" data-inline="true" data-transition="fade">HOME</a>
+         <h1><div><span></span>LIST</div></h1>
+         <a href="#detail-edit-page-1"  data-role="button" data-inline="true" data-mini="true" class="tag-new right" data-transition="fade">TAG</a>
+      </div>
+        <div class="top-tip icon">
+            <div class="top-tip-inner">
+	            <div class="top-tip-filter-content">
+		            <h1>Filter</h1>
+			        <div class="lap-list-detail lap-detail-status">
+			            <div class="lap-list-detail-title">Status</div>
+                        <div class="lap-list-detail-content">
+                            <select name="location-country" id="lap-detail-location-country">
+                                <option value="0">ANY</option>
+                                <option selected="selected" value="1">Tagged with a Labdoo ID (S0)</option>
+                            </select>
+                        </div>
+			        </div>
+			        <div class="lap-list-detail lap-detail-edoovillage">
+                        <div class="lap-list-detail-title">Edoovillage</div>
+                        <div class="lap-list-detail-content">
+	                        <select name="location-country" id="lap-detail-location-country">
+	                            <option value="0">ANY</option>
+	                            <option selected="selected" value="1">Albania, Tirana: Fan S. Noli school</option>
+	                        </select>
+                        </div>
+                    </div>
+                    <div class="lap-list-detail lap-detail-country">
+                        <div class="lap-list-detail-title">Country</div>
+                        <div class="lap-list-detail-content">
+                            <select name="location-country" id="lap-detail-location-country">
+			                    <option selected="selected" value="0">ANY</option>
+			                    <option value="1">China</option>
+			                    <option value="2">USA</option>
+			                    <option value="3">Aruba</option>
+			                    <option value="4">The 4th Option</option>
+			                </select>
+                        </div>
+                    </div>
+                    <div class="lap-list-detail lap-detail-hub-assigned">
+                        <div class="lap-list-detail-title">Hub assigned</div>
+                        <div class="lap-list-detail-content">
+                            <select name="location-country" id="lap-detail-location-hub-assigned">
+                                <option value="0">ANY</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="text_center">
+                        <a href="#" data-role="button" data-inline="true" data-theme="c">APPLY</a>
+                        <a href="#" data-role="button" data-inline="true" data-theme="c">CANCEL</a>
+                    </div>
+	            </div>
+                <div class="top-tip-toggle pull-up"><span></span></div>
+            </div>
+        </div>
+        <div class="lap-list-wrap">
+          <ul class="lap-list">
+            <li class="lap-item">
+              <a href="#detail-page" id="000001170" data-transition="fade">
+                <p class="lap-id"><span class="label">Laptop</span><span class="lap-id">000001170</span></p>
+                <p class="lap-model"><span class="label">Model</span><span class="model">Lenovo ThinkPad R400</span></p>
+                <p class="country"><span class="label">Country</span><span class="country">Algeria</span></p>
+                <p class="lap-stat"><span class="label">Status</span><span class="stat">Tagged with a Labdoo ID (S0)</span></p>
+                <div class="icon next">></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+    </div><!-- /page -->
+    
+    <!-- list detail page -->
+    <div data-role="page" id="detail-page" class="panel" data-header='none' style="overflow:hidden">
+      <div class="all-header"  data-role="header">
+         <a href="#list-page" data-role="button" data-inline="true" data-transition="fade">BACK</a>
+         <h1><div><span></span>My Donated Laptop</div></h1>
+         <a href="#detail-edit-page-1"  data-role="button" data-inline="true" data-mini="true" class="tag-new right" data-transition="fade">EDIT</a>
+      </div>
+      <div data-role="content">
+        <div class="lap-list-detail lap-detail-image">
+            <img src="img/laptop_bg.png" class="lap-detail-image-background"/>
+            <div class="lap-detail-image-mylaptop-wrapper">
+                <div id="lap-detail-image-mylaptop-view" class="lap-detail-image-mylaptop"></div>
+               <!--  <img id="lap-detail-image-mylaptop" src="img/test.jpg" class="lap-detail-image-mylaptop"/>  -->
+            </div>
+        </div>
+        <div class="lap-list-detail lap-detail-status">
+            <div class="lap-list-detail-title">Status</div>
+            <div class="lap-list-detail-content">Tagged with a Labdoo ID (S0)</div>
+        </div>
+        <div class="lap-list-detail lap-detail-location">
+            <div class="lap-list-detail-title">Locatioin</div>
+            <div class="lap-list-detail-content">
+                <div>
+                   Shanghai, China<br/>
+                   31 13' 49.4148" N (31.230393)<br/>
+                   121 28' 25.3344" E (121.473704)<br/>
+                </div>
+            </div>
+        </div>
+        <div class="lap-list-detail lap-detail-basic-information">
+            <div class="lap-list-detail-title">Basic information</div>
+            <div class="lap-list-detail-content">
+                <div class="lap-list-detail-subtitle">Labdoo Identifier</div>
+                <div>000001150</div>
+                <div class="lap-list-detail-subtitle">Model</div>
+                <div>ASUS W3J</div>
+                <div class="lap-list-detail-subtitle">Serial Numb</div>
+                <div>65N0AG017062</div>
+                <div class="lap-list-detail-subtitle">Current Laptop Manager</div>
+                <div>Calvin</div>
+                <div class="lap-list-detail-subtitle">Source Group</div>
+                <div>Labdoo Hub Chengdu OQ</div>
+            </div>
+        </div>
+        <div class="lap-list-detail lap-detail-addtional-informatioin">
+            <div class="lap-list-detail-title">Additional information</div>
+            <div class="lap-list-detail-content">
+                <div class="lap-list-detail-subtitle">Entry Date</div>
+                <div>Sun,2012-12-23(All day)</div>
+                <div class="lap-list-detail-subtitle">Device type</div>
+                <div>Laptop</div>
+                <div class="lap-list-detail-subtitle">Tagger</div>
+                <div>Clavin</div>
+            </div>
+        </div>
+      </div>
+    </div><!-- /page -->
+    
+    <!-- Detail Edit Page 1 -->
+    <div data-role="page" id="detail-edit-page-1" class="panel detail-edit-page" data-header='none' style="overflow:hidden">
+      <div class="all-header"  data-role="header">
+         <a href="#detail-page" data-role="button" data-inline="true" data-transition="fade">CANCEL</a>
+         <h1><div><span></span>Edit Laptop</div></h1>
+         <a href="#detail-edit-page-1"  data-role="button" data-inline="true" data-mini="true" data-transition="fade">RESET</a>
+      </div>
+      <div data-role="content" class="fullHeight">
+        <div class="lap-list-detail lap-detail-image">
+            <img src="img/laptop_bg.png" class="lap-detail-image-background"/>
+            <div class="lap-detail-image-mylaptop-wrapper">
+                <div id="lap-detail-image-mylaptop" class="lap-detail-image-mylaptop"></div>
+               <!--  <img id="lap-detail-image-mylaptop" src="img/test.jpg" class="lap-detail-image-mylaptop"/>  -->
+            </div>
+            <a href="javascript:;" data-mini="true" class="lap-detail-image-camera" data-transition="fade" data-shadow="false"><img src="img/camera.png"></a>
+        </div>
+        <div class="lap-list-detail lap-detail-status">
+            <div class="lap-list-detail-title">Status</div>
+                <select class="lap-list-detail-content" name="lap-detail-status" id="lap-detail-status" data-theme="a">
+                    <option value="1">Tagged with a Labdoo ID (S0)</option>
+                    <option value="2">The 2nd Option</option>
+                    <option value="3">The 3rd Option</option>
+                    <option value="4">The 4th Option</option>
+                </select>
+        </div>
+      </div>
+      <div class="process-dots-wrapper"><div class="process-dots-inner">
+            <a href="#detail-edit-page-1" data-inline="true" data-mini="true" data-transition="slide" class="process-dots process-dots-1 process-dots-active"><span></span></a>
+            <a href="#detail-edit-page-2" data-inline="true" data-mini="true" data-transition="slide" class="process-dots process-dots-2"><span></span></a>
+            <a href="#detail-edit-page-3" data-inline="true" data-mini="true" data-transition="slide" class="process-dots process-dots-3"><span></span></a>
+      </div></div>
+    </div><!-- /page -->
+    
+    <!-- Detail Edit Page 2 -->
+    <div data-role="page" id="detail-edit-page-2" class="panel detail-edit-page" data-header='none' style="overflow:hidden">
+      <div class="all-header"  data-role="header">
+         <a href="#detail-page" data-role="button" data-inline="true" data-transition="fade">CANCEL</a>
+         <h1><div><span></span>Edit Laptop</div></h1>
+         <a href="#detail-edit-page-1"  data-role="button" data-inline="true" data-mini="true" data-transition="fade">RESET</a>
+      </div>
+      <div data-role="content" class="fullHeight">
+        <div class="lap-list-detail lap-detail-location">
+            <div class="lap-list-detail-title">Location</div>
+            <div class="lap-list-detail-content">
+                <div class="lap-list-detail-subtitle">City</div>
+                <input type="text" value="Shangehai" name="location-city" id="lap-detail-location-city"/>
+                <div class="lap-list-detail-subtitle">Country</div>
+                <select name="location-country" class="lap-detail-location-country" id="lap-detail-location-country">
+                    <option value="1">China</option>
+                    <option selected="selected" value="2">USA</option>
+                    <option value="3">Aruba</option>
+                    <option value="4">The 4th Option</option>
+                </select>
+            </div>
+        </div>
+      </div>
+      <div class="process-dots-wrapper"><div class="process-dots-inner">
+        <a href="#detail-edit-page-1" data-direction="reverse" data-inline="true" data-mini="true" data-transition="slide" class="process-dots process-dots-1"><span></span></a>
+        <a href="#detail-edit-page-2" data-inline="true" data-mini="true" data-transition="slide" class="process-dots process-dots-2 process-dots-active"><span></span></a>
+        <a href="#detail-edit-page-3" data-inline="true" data-mini="true" data-transition="slide" class="process-dots process-dots-3"><span></span></a>
+      </div></div>
+    </div><!-- /page -->
+    
+    <!-- Detail Edit Page 3 -->
+    <div data-role="page" id="detail-edit-page-3" class="panel detail-edit-page" data-header='none' style="overflow:hidden">
+      <div class="all-header"  data-role="header">
+         <a href="#detail-page" data-role="button" data-inline="true" data-transition="fade">CANCEL</a>
+         <h1><div><span></span>Edit Laptop</div></h1>
+         <a href="#detail-edit-page-1"  data-role="button" data-inline="true" data-mini="true" data-transition="fade">RESET</a>
+      </div>
+      <div data-role="content" class="fullHeight">
+        <div class="lap-list-detail lap-detail-basic-information">
+            <div class="lap-list-detail-title">Basic information</div>
+            <div class="lap-list-detail-content">
+                <div class="lap-list-detail-subtitle">Model</div>
+                <input type="text" value="ASUS W3S" name="bi-model" id="lap-detail-bi-model"/>
+                  <div class="lap-list-detail-subtitle">Serial Number</div>
+                <input type="text" value="56513226UK" name="bi-searial-number" id="lap-detail-bi-serial-number"/>
+                  <div class="lap-list-detail-subtitle">Current Laptop Manager</div>
+                <input type="text" value="Calvin Shen" name="bi-clm" id="lap-detail-bi-clm"/>
+                <div class="lap-list-detail-subtitle">Source Group</div>
+                <select name="bi-source-group" id="lap-detail-bi-source-group">
+                    <option value="1">Grassroots</option>
+                    <option selected="selected" value="2">Grassroots</option>
+                    <option value="3">Grassroots</option>
+                    <option value="4">Grassroots</option>
+                </select>
+            </div>
+        </div>
+        <div class="save_button" ><div><span></span>SAVE THIS LAPTOP</div></div>
+      </div>
+      <div class="process-dots-wrapper"><div class="process-dots-inner">
+            <a href="#detail-edit-page-1" data-direction="reverse" data-inline="true" data-mini="true" data-transition="slide" class="process-dots process-dots-1"><span></span></a>
+            <a href="#detail-edit-page-2" data-direction="reverse" data-inline="true" data-mini="true" data-transition="slide" class="process-dots process-dots-2"><span></span></a>
+            <a href="#detail-edit-page-3" data-inline="true" data-mini="true" data-transition="slide" class="process-dots process-dots-3 process-dots-active"><span></span></a>
+      </div></div>
+    </div><!-- /page -->
+</body>
+</html>
